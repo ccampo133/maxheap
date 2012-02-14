@@ -6,7 +6,9 @@ maxheap.py
 Author: Christopher Campo
 Email : ccampo.progs@gmail.com
 
-A set of functions to implement a max-heap priority queue in Python.  I wrote this to study for a computer science class exam and figured that it may come in handy some day, so I might as well clean it up and publish it online.
+A set of functions to implement a max-heap priority queue in Python.  I wrote
+this to study for a computer science class exam and figured that it may come 
+in handy some day, so I might as well clean it up and publish it online.
 
 Functions:
 ----------
@@ -46,14 +48,16 @@ def heapify(A):
 
 # runs in log(n) time
 def push_heap(A, val):
-    '''Pushes a value onto the heap `A` while keeping the heap property intact.  The heap size increases by 1.'''
+    '''Pushes a value onto the heap `A` while keeping the heap property 
+    intact.  The heap size increases by 1.'''
     A.append(val)
     __siftup(A, len(A) - 1)   # furthest left node
     return
 
 # runs in log(n) time
 def pop_heap(A):
-    '''Returns the max value from the heap `A` while keeping the heap property intact.  The heap size decreases by 1.'''
+    '''Returns the max value from the heap `A` while keeping the heap
+    property intact.  The heap size decreases by 1.'''
     n = len(A) - 1
     __swap(A, 0, n)
     max = A.pop(n)
@@ -62,7 +66,8 @@ def pop_heap(A):
 
 # runs in log(n) time
 def replace_key(A, node, newval):
-    '''Replace the key at node `node` in the max-heap `A` by `newval`.  The heap size does not change.'''
+    '''Replace the key at node `node` in the max-heap `A` by `newval`.
+    The heap size does not change.'''
     curval  = A[node]
     A[node] = newval
     # increase key
@@ -80,7 +85,8 @@ def __swap(A, i, j):
 
 # runs in log(n) time   
 def __siftdown(A, node):
-    '''Traverse down a binary tree `A` starting at node `node` and turn it into a max-heap'''
+    '''Traverse down a binary tree `A` starting at node `node` and 
+    turn it into a max-heap'''
     child = 2*node + 1
     # base case, stop recursing when we hit the end of the heap
     if child > len(A) - 1:
@@ -95,7 +101,9 @@ def __siftdown(A, node):
 
 # runs in log(n) time    
 def __siftup(A, node):
-    '''Traverse up an otherwise max-heap `A` starting at node `node` (which is the only node that breaks the heap property) and restore the heap structure.'''
+    '''Traverse up an otherwise max-heap `A` starting at node `node`
+    (which is the only node that breaks the heap property) and restore 
+    the heap structure.'''
     parent = (node - 1)/2
     if A[parent] < A[node]:
         __swap(A, node, parent)

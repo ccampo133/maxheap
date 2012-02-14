@@ -2,7 +2,9 @@ maxheap.py
 Author: Christopher Campo
 Email : ccampo.progs@gmail.com
 
-A set of functions to implement a max-heap priority queue in Python.  I wrote this to study for a computer science class exam and figured that it may come in handy some day, so I might as well clean it up and publish it online.
+A set of functions to implement a max-heap priority queue in Python.  I wrote
+this to study for a computer science class exam and figured that it may come 
+in handy some day, so I might as well clean it up and publish it online.
 
 Functions:
 ----------
