@@ -97,7 +97,9 @@ def __siftdown(A, node):
     # preserves heap structure
     if A[node] < A[child]:
         __swap(A, node, child)
-    __siftdown(A, child)
+        __siftdown(A, child)
+    else:
+        return
 
 # runs in log(n) time    
 def __siftup(A, node):
